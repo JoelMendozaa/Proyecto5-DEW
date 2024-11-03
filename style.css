@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(187, 237, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+}
+
+.buscador {
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: 20px;
+}
+
+.div-titulo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.div-titulo h1 {
+    font-weight: 300;
+}
+
+.contenedor{
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+}
+
+/*ESTILOS FORMULARIOS*/
+.contenedor .div-formulario {
+    width: 30%;
+    height: 250px;
+    margin: 15px 15px;
+    background-color: rgb(159, 223, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid blue;
+}
+
+.contenedor .div-formulario h2 {
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 2em;
+    color: rgb(0, 0, 0);
+}
+
+.contenedor .div-formulario form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor .div-formulario form input,
+.contenedor .div-formulario form button {
+    width: 60%;
+    padding: 10px 10px;
+    margin: 10px 10px;
+}
+
+/*ESTILOS LISTA*/
+
+.contenedor .div-listado {
+    width: 55%;
+    height: calc(100% - 50px);
+    margin: 15px 15px;
+    background-color: rgb(159, 223, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid blue;
+}
+
+.contenedor .div-listado h2 {
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 2em;
+    color: rgb(0, 0, 0);
+}
+
+.contenedor .div-listado .div-subApartados{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor .div-listado .div-subApartados p {
+    margin: 10px 0;
+    font-size: 1em;
+    color: rgb(0, 0, 0);
+}
+
+hr {
+    width: 100%;
+    height: 1px;
+}
+
+
+.apartado-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    transition: margin-left 0.3s ease;
+}
+
+.apartado-nombre {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.apartado-botones {
+    display: flex;
+    gap: 5px;
+}
+
+/* BOTON AGREGAR */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    font-size: 17px;
+    color: #fff;
+    border-radius: 7px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s;
+    transition-property: box-shadow;
+}
+
+.btn {
+    background: rgb(0,140,255);
+    box-shadow: 0 0 25px rgb(0,140,255);
+    cursor: pointer;
+}
+
+.btn:hover {
+    box-shadow: 0 0 5px rgb(0,140,255),
+                0 0 25px rgb(0,140,255),
+                0 0 50px rgb(0,140,255),
+                0 0 100px rgb(0,140,255);
+}
+
+/*BOTON ELIMINAR*/
+.btn-eliminar {
+    background: rgb(152, 0, 0);
+    box-shadow: 0 0 25px rgb(255, 0, 0);
+}
+
+.btn-eliminar:hover {
+    box-shadow: 0 0 5px rgb(255, 0, 0),
+                0 0 25px rgb(255, 0, 0),
+                0 0 50px rgb(255, 0, 0),
+                0 0 100px rgb(255, 0, 0);
+}
+
+
+/*BOTON AÑADIR SUBAPARTADO*/
+.btn-agregar-sub {
+    background: rgb(0, 152, 0);
+    box-shadow: 0 0 25px rgb(0, 255, 0);
+}
+
+.btn-agregar-sub:hover {
+    box-shadow: 0 0 5px rgb(0, 255, 0),
+                0 0 25px rgb(0, 255, 0),
+                0 0 50px rgb(0, 255, 0),
+                0 0 100px rgb(0, 255, 0);
+}
+
+.div-apartados {
+    width: 100%;
+    padding: 0 20px;
+}
+
+.sub-apartados {
+    margin-left: 20px;
+}
