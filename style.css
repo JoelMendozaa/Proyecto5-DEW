@@ -308,3 +308,67 @@ hr {
     transform: rotate(45deg);
   }
   
+
+  /*RESPONSIVO*/
+  @media (max-width: 768px) {
+    .contenedor {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .contenedor .div-formulario,
+    .contenedor .div-listado {
+        width: 90%;
+        margin: 15px auto;
+    }
+
+    #buscador {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .contenedor .div-formulario form input,
+    .contenedor .div-formulario form button {
+        width: 80%;
+    }
+
+    .apartado-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .apartado-botones {
+        margin-top: 10px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .div-titulo h1 {
+        font-size: 1.5em;
+    }
+
+    .contenedor .div-formulario h2,
+    .contenedor .div-listado h2 {
+        font-size: 1.5em;
+    }
+
+    #buscador {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .contenedor .div-formulario form input,
+    .contenedor .div-formulario form button {
+        width: 90%;
+    }
+
+    .btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
