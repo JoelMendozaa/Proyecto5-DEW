@@ -64,6 +64,10 @@ function mostrarApartados(apartadosFiltrados = null) {
     renderizarApartados(apartadosFiltrados || listaApartados, divApartados, 0); // Renderiza los apartados
 }
 
+function ocultarApartados(){
+        
+}
+
 // Renderiza los apartados y sub-apartados en el DOM
 function renderizarApartados(apartados, contenedor, nivel) {
     apartados.forEach(apartado => {
