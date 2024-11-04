@@ -87,14 +87,14 @@ function renderizarApartados(apartados, contenedor, nivel) {
         // Botón para eliminar el apartado
         const eliminarBoton = document.createElement('button');
         eliminarBoton.onclick = () => eliminarApartado(id); // Evento de click
-        eliminarBoton.textContent = 'Borrar';
+        eliminarBoton.textContent = '-';
         eliminarBoton.classList.add('btn', 'btn-eliminar');
         eliminarBoton.disabled = subApartados.length > 0; // Desactiva el botón si hay sub-apartados
 
         // Botón para agregar un sub-apartado
         const agregarSubApartadoBoton = document.createElement('button');
         agregarSubApartadoBoton.onclick = () => agregarSubApartado(id); // Evento de click
-        agregarSubApartadoBoton.textContent = 'Agregar Sub';
+        agregarSubApartadoBoton.textContent = '+';
         agregarSubApartadoBoton.classList.add('btn', 'btn-agregar-sub');
 
         // Añade los botones al contenedor de botones
