@@ -91,7 +91,7 @@ function renderizarApartados(apartados, contenedor, nivel) {
 
         const eliminarBoton = document.createElement('button');
         eliminarBoton.onclick = () => eliminarApartado(id);
-        eliminarBoton.textContent = 'Borrar';
+        eliminarBoton.textContent = '-';
         eliminarBoton.classList.add('btn', 'btn-eliminar');
         eliminarBoton.disabled = tipo === 'carpeta' && subApartados.length > 0;
         botonesDiv.appendChild(eliminarBoton);
@@ -99,7 +99,7 @@ function renderizarApartados(apartados, contenedor, nivel) {
         if (tipo === 'carpeta') {
             const agregarSubApartadoBoton = document.createElement('button');
             agregarSubApartadoBoton.onclick = () => agregarSubApartado(id);
-            agregarSubApartadoBoton.textContent = 'Agregar Sub';
+            agregarSubApartadoBoton.textContent = '+';
             agregarSubApartadoBoton.classList.add('btn', 'btn-agregar-sub');
             botonesDiv.appendChild(agregarSubApartadoBoton);
         }
