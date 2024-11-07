@@ -91,7 +91,7 @@ function renderizarApartados(apartados, contenedor, nivel) {
 
         const eliminarBoton = document.createElement('button');
         eliminarBoton.onclick = () => eliminarApartado(id);
-        eliminarBoton.textContent = '-';
+        eliminarBoton.textContent = 'x';
         eliminarBoton.classList.add('btn', 'btn-eliminar');
         eliminarBoton.disabled = tipo === 'carpeta' && subApartados.length > 0;
         botonesDiv.appendChild(eliminarBoton);
