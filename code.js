@@ -1,4 +1,10 @@
-let listaApartados = [];
+let listaApartados = [{
+    id: 'root',
+    nombre: '/',
+    tipo: 'carpeta',
+    subApartados: [],
+    visible: true
+}];
 
 const objApartado = {
     id: '',
@@ -74,7 +80,7 @@ function renderizarApartados(apartados, contenedor, nivel) {
             const checkboxLabel = document.createElement('label');
             checkboxLabel.classList.add('container');
             checkboxLabel.innerHTML = `
-                <input type="checkbox" class="toggle-apartado" ${visible ? 'checked' : ''}>
+                <input type="checkbox" class="toggle-apartado ui-checkbox" ${visible ? 'checked' : ''}>
                 <span class="checkmark"></span>
             `;
             checkboxLabel.querySelector('input').addEventListener('change', () => toggleApartado(id));
@@ -89,12 +95,14 @@ function renderizarApartados(apartados, contenedor, nivel) {
         const botonesDiv = document.createElement('div');
         botonesDiv.classList.add('apartado-botones');
 
-        const eliminarBoton = document.createElement('button');
-        eliminarBoton.onclick = () => eliminarApartado(id);
-        eliminarBoton.textContent = 'x';
-        eliminarBoton.classList.add('btn', 'btn-eliminar');
-        eliminarBoton.disabled = tipo === 'carpeta' && subApartados.length > 0;
-        botonesDiv.appendChild(eliminarBoton);
+        if (id !== 'root') {
+            const eliminarBoton = document.createElement('button');
+            eliminarBoton.onclick = () => eliminarApartado(id);
+            eliminarBoton.textContent = 'x';
+            eliminarBoton.classList.add('btn', 'btn-eliminar');
+            eliminarBoton.disabled = tipo === 'carpeta' && subApartados.length > 0;
+            botonesDiv.appendChild(eliminarBoton);
+        }
 
         if (tipo === 'carpeta') {
             const agregarSubApartadoBoton = document.createElement('button');
